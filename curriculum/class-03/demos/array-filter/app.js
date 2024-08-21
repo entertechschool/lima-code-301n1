@@ -10,4 +10,6 @@ const alumnos = [
   { nombre: "andrea", nota: 13 },
 ];
 
+const NOTA_MINIMA = 13;
+
 // Lista a los alumnos aprobados y desaprobados
