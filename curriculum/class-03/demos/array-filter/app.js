@@ -12,4 +12,21 @@ const alumnos = [
 
 const NOTA_MINIMA = 13;
 
+function criteriosFiltroAprobado(alumno) {
+  return alumno.nota >= NOTA_MINIMA;
+}
+
+const alumnos_aprobados = alumnos.filter(criteriosFiltroAprobado);
+console.log(alumnos_aprobados);
+
+const alumnos_aprobadazos = alumnos.filter((alumno) => alumno.nota >= 15);
+console.log(alumnos_aprobadazos);
+
+function criteriosFiltroDesaprobados(alumno) {
+  return alumno.nota < NOTA_MINIMA;
+}
+
+const alumnos_desaprobados = alumnos.filter(criteriosFiltroDesaprobados);
+console.log(alumnos_desaprobados);
+
 // Lista a los alumnos aprobados y desaprobados
