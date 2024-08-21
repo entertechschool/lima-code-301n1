@@ -7,6 +7,7 @@ import CardActions from "./components/CardActions";
 
 function App() {
   const [contador, setContador] = useState(0);
+  const [contadorcito, setContadorcito] = useState(0);
 
   function aumentarContador() {
     setContador(contador + 1);
@@ -21,7 +22,7 @@ function App() {
       <h1>Hello soy App.jsx (parent)</h1>
       <p>Contador: {contador}</p>
       <hr />
-      <CardActions aumentar={aumentarContador} disminuir={disminuirContador} />
+      <CardActions aumentar={aumentarContador} disminuir={disminuirContador} contadorcito={contadorcito} setContadorcito={setContadorcito} />
     </>
   );
 }
