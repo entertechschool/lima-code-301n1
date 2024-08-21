@@ -1,23 +1,29 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import Button from 'react-bootstrap/Button';
+import CardActions from "./components/CardActions";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [contador, setContador] = useState(0);
 
   function aumentarContador() {
-    setCount(count + 1);
+    setContador(contador + 1);
+  }
+
+  function disminuirContador() {
+    setContador(contador - 1);
   }
 
   return (
     <>
-      <h1>Hello</h1>
-      <Button variant="success" onClick={aumentarContador}>Aumentar conteo: {count}</Button>
+      <h1>Hello soy App.jsx (parent)</h1>
+      <p>Contador: {contador}</p>
+      <hr />
+      <CardActions aumentar={aumentarContador} disminuir={disminuirContador} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
