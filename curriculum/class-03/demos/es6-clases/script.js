@@ -18,10 +18,31 @@ Car.prototype.stop = function () {
 
 // Comienza aqui:
 
+class Carro {
+  constructor(color, tipo, motor, transmision) {
+    this.color = color;
+    this.tipo = tipo;
+    this.motor = motor;
+    this.transmision = transmision;
+    this.moving = false;
+  }
+
+  drive() {
+    this.moving = true;
+  }
+
+  stop() {
+    this.moving = false;
+  }
+}
+
 // Test:
-const mazda = new Car("grey", "hatchback", "4cyl", "automatic");
-console.log(`Is Moving? ${mazda.moving.toString()}`);
+const mazda = new Carro("grey", "hatchback", "4cyl", "automatic");
+
+carrito.drive();
+
+console.log(`Is Moving? ${mazda.moving.toString()}`); // false
 mazda.drive();
-console.log(`Is Moving? ${mazda.moving.toString()}`);
+console.log(`Is Moving? ${mazda.moving.toString()}`); // true
 mazda.stop();
-console.log(`Is Moving? ${mazda.moving.toString()}`);
+console.log(`Is Moving? ${mazda.moving.toString()}`); // false
