@@ -4,6 +4,10 @@
 
 En la clase pasada, aprendiste a cómo pasar información de un parent component a un child component a través de `props`. Para esta clase, también vamos a pasar funciones a través de los `props`. También vamos a mostrar un componente anidado utilizando `.map` en lugar de programar cada uno individualmente.
 
+### Diagrama
+Revisa el siguiente diagrama para entender mejor la clase:
+- [Pizarra en figma](https://www.figma.com/design/38Q2COawjDQsnaYcsjKTEd/301-class-03)
+
 ## Descripción general
 
 - Ejercicio de calentamiento
