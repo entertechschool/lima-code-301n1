@@ -1,5 +1,5 @@
-// const ul_aprobados = document.getElementById("aprobados");
-// const ul_desaprobados = document.getElementById("desaprobados");
+const ul_aprobados = document.getElementById("aprobados");
+const ul_desaprobados = document.getElementById("desaprobados");
 
 const alumnos = [
   { nombre: "pepe", nota: 14 },
@@ -30,3 +30,13 @@ const alumnos_desaprobados = alumnos.filter(criteriosFiltroDesaprobados);
 console.log(alumnos_desaprobados);
 
 // Lista a los alumnos aprobados y desaprobados
+function renderAlumnos(alumnos, ul) {
+  alumnos.forEach((alumno) => {
+    const li = document.createElement("li");
+    li.textContent = alumno.nombre;
+    ul.appendChild(li);
+  });
+}
+
+renderAlumnos(alumnos_aprobados, ul_aprobados);
+renderAlumnos(alumnos_desaprobados, ul_desaprobados);
