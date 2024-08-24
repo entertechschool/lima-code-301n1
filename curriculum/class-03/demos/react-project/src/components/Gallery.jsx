@@ -22,6 +22,7 @@ export default function Gallery(props) {
               personasConLikes={props.personasConLikes}
               setPersonasConLikes={props.setPersonasConLikes}
               setPersonaFavorita={props.setPersonaFavorita}
+              setModalPersona={props.setModalPersona}
             />
           );
         })}

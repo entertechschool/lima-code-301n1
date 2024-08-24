@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Header from "./Header.jsx";
 import Gallery from "./Gallery.jsx";
+import ModalPerson from "./ModalPerson.jsx"
 
 import rawPersonas from "../personas.json";
 
@@ -14,6 +15,8 @@ function App() {
   const [personasConLikes, setPersonasConLikes] = useState(personas);
 
   const [personaFavorita, setPersonaFavorita] = useState("");
+
+  const [modalPersona, setModalPersona] = useState({});
 
   function aumentarContador() {
     setContador(contador + 1);
@@ -29,7 +32,9 @@ function App() {
         personasConLikes={personasConLikes}
         setPersonasConLikes={setPersonasConLikes}
         setPersonaFavorita={setPersonaFavorita}
+        setModalPersona={setModalPersona}
       />
+      <ModalPerson modalPersona={modalPersona} setModalPersona={setModalPersona} />
     </>
   );
 }

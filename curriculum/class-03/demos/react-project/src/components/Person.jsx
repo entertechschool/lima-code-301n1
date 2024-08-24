@@ -6,6 +6,10 @@ import Button from "react-bootstrap/Button";
 export default function Person(props) {
   const [likes, setLikes] = useState(0);
 
+  function clickCard() {
+    props.setModalPersona(props.persona);
+  }
+
   function clickLike() {
     setLikes(likes + 1);
     props.aumentarLikes();
@@ -35,7 +39,7 @@ export default function Person(props) {
   }
 
   return (
-    <Card style={{ width: "18rem", padding: "1em" }}>
+    <Card style={{ width: "18rem", padding: "1em", cursor: "pointer" }} onClick={clickCard}>
       <Card.Img variant="top" src="https://placehold.co/60x30" />
       <Card.Body>
         <Card.Title>{props.persona.nombre}</Card.Title>
