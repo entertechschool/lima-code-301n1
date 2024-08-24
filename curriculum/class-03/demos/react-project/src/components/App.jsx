@@ -6,9 +6,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Header.jsx";
 import Gallery from "./Gallery.jsx";
 
-import personas from "../personas.json";
+import rawPersonas from "../personas.json";
 
 function App() {
+  const [personas, setPersonas] = useState(rawPersonas);
   const [contador, setContador] = useState(0);
   const [personasConLikes, setPersonasConLikes] = useState(personas);
 
@@ -20,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Header contadorLikes={contador} personaFavorita={personaFavorita} />
+      <Header contadorLikes={contador} personaFavorita={personaFavorita} rawPersonas={rawPersonas} setPersonas={setPersonas} />
       <hr />
       <Gallery
         personas={personas}

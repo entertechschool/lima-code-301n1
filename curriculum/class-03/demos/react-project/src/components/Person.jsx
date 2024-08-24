@@ -40,7 +40,7 @@ export default function Person(props) {
       <Card.Body>
         <Card.Title>{props.persona.nombre}</Card.Title>
         <Card.Text>Hijos: {props.persona.hijos}</Card.Text>
-        <Button variant="primary" onClick={clickLike}>
+        <Button variant="outline-primary" onClick={clickLike}>
           Like [ {likes} ]
         </Button>
       </Card.Body>
