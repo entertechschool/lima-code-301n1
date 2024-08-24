@@ -6,17 +6,21 @@ function Header(props) {
   const [filter, setFilter] = useState(0);
 
   function selectFilter(event) {
-    console.log(Number(event.target.value));
     setFilter(Number(event.target.value));
   }
 
   function submitFilter(event) {
     event.preventDefault();
-    console.log("Submited!");
+    console.log(filter);
+    if (filter === 0) {
+      props.setPersonas(props.rawPersonas);
+      return;
+    }
     // Modificar el state del App/[personas] a través del App/[setPersonas]
-    const personasFiltradas = props.rawPersonas.filter(persona => persona.hijos === filter);
+    const personasFiltradas = props.rawPersonas.filter(
+      (persona) => persona.hijos === filter
+    );
     props.setPersonas(personasFiltradas);
-
   }
 
   return (
@@ -34,7 +38,7 @@ function Header(props) {
             onChange={selectFilter}
             aria-label="Default select example"
           >
-            <option># de Hijos</option>
+            <option value="0"># de Hijos</option>
             <option value="1">1 hijo</option>
             <option value="2">2 hijos</option>
             <option value="3">3 hijos</option>
