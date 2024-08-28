@@ -10,7 +10,9 @@ import personas from "../personas.json";
 
 function App() {
   const [contador, setContador] = useState(0);
-  const [personasConLikes, setPersonasConLikes] = useState(personas);
+  const [personasConLikes, setPersonasConLikes] = useState(personas); // []
+
+  console.log(personas.length);
 
   const [personaFavorita, setPersonaFavorita] = useState("");
 
@@ -20,15 +22,25 @@ function App() {
 
   return (
     <>
-      <Header contadorLikes={contador} personaFavorita={personaFavorita} />
-      <hr />
-      <Gallery
-        personas={personas}
-        aumentarContador={aumentarContador}
-        personasConLikes={personasConLikes}
-        setPersonasConLikes={setPersonasConLikes}
-        setPersonaFavorita={setPersonaFavorita}
+      <Header
+        contadorLikes={contador}
+        personaFavorita={personaFavorita}
+        nombre={"Linder"}
       />
+      <hr />
+      {personas.length === 0 ? (
+        <div>
+          <h2>No hay personas por el momento</h2>
+        </div>
+      ) : (
+        <Gallery
+          personas={personas}
+          aumentarContador={aumentarContador}
+          personasConLikes={personasConLikes}
+          setPersonasConLikes={setPersonasConLikes}
+          setPersonaFavorita={setPersonaFavorita}
+        />
+      )}
     </>
   );
 }
