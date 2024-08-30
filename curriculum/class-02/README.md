@@ -25,7 +25,7 @@ Esta clase se centrará en pasar información como `props` de un parent componen
 - Props
 - React-Bootstrap
 - Netlify
-- setState 
+- setState
 
 #### Ejecutar
 

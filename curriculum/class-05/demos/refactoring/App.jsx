@@ -9,6 +9,17 @@ Prompt: Tu compañero de equipo es nuevo en React y te ha pedido
 un consejo sobre este código. ¿Cómo le aconsejarías dividir. este código en componentes?
 */
 
+const ImageCard = ({ title, like }) => {
+  return (
+    <>
+      <div>
+        <p>{title}</p>
+        <p>{like}</p>
+      </div>
+    </>
+  );
+};
+
 const App = () => {
   const [imageOneVotes, setImageOneVotes] = useState(0);
   const [imageTwoVotes, setImageTwoVotes] = useState(0);
