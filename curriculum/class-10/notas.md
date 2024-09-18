@@ -36,4 +36,14 @@ function infinito() {
 infinito();
 // Aquí solo se agregan registros a la pila. Por ende, genero Stack Overflow.
 ```
-
+------
+# Server con Express por IA:
+Escribe en una IA el siguiente prompt:
+```
+Crea un servidor web con los siguientes requisitos:
+Utiliza NodeJS y Express
+Escucha al puerto 3000 de forma predeterminada
+Tiene 1 ruta GET: /items que enumera los nombres de los elementos de una lista
+Tiene 1 ruta POST: /items que agrega un elemento a la lista
+La lista se puede almacenar como un array en la memoria
+```
